@@ -4,46 +4,45 @@ import java.util.Calendar;
 
 public class CharAt {
     public static void main(String[] args) {
-        char s="ÖĞ¹úÈË".charAt(1);
-        char c = "Ğì¼Î»Ô".charAt(2);//charAt »ñÈ¡×Ö·û´®ÄÚ¸ÃË÷Òı´¦µÄ×Ö·ûÀàĞÍ
+        char s="ä¸­å›½äºº".charAt(1);
+        char c = "å¾å˜‰è¾‰".charAt(2);//charAt è·å–å­—ç¬¦ä¸²å†…è¯¥ç´¢å¼•å¤„çš„å­—ç¬¦ç±»å‹
         System.out.println(c);
-        System.out.println("abc".compareTo("abb")); //compareTo ´Ó×Ö·û´®Ê××ÖÄ¸¿ªÊ¼±È½Ï±àÂëÖµ£¬Ö»Òª²»Îª0Ôò·µ»Ø½á¹û Îª0ÔòÍùºó¼ÌĞø¶Ô±È
+        System.out.println("abc".compareTo("abb")); //compareTo ä»å­—ç¬¦ä¸²é¦–å­—æ¯å¼€å§‹æ¯”è¾ƒç¼–ç å€¼ï¼Œåªè¦ä¸ä¸º0åˆ™è¿”å›ç»“æœ ä¸º0åˆ™å¾€åç»§ç»­å¯¹æ¯”
         int result1 ="abcd".compareTo("abce");
         System.out.println(result1);
         boolean result2 = "helloWorld.java".contains("ld");
-        System.out.println(result2); //contains ÅĞ¶ÏÀ¨ºÅÀïµÄ×Ö·û´®ÔÚÔ­×Ö·û´®ÖĞÊÇ·ñ´æÔÚ
-        boolean result3 = "http£º//www.baidu.com".contains(".java");
+        System.out.println(result2); //contains åˆ¤æ–­æ‹¬å·é‡Œçš„å­—ç¬¦ä¸²åœ¨åŸå­—ç¬¦ä¸²ä¸­æ˜¯å¦å­˜åœ¨
+        boolean result3 = "httpï¼š//www.baidu.com".contains(".java");
         System.out.println(result3);
-        boolean result4 = "hello World.java".endsWith(".java");//endsWish ÅĞ¶Ï×Ö·û´®×îºóÊÇ·ñ´æÔÚÊäÈëµÄ×Ö·û´®
+        boolean result4 = "hello World.java".endsWith(".java");//endsWish åˆ¤æ–­å­—ç¬¦ä¸²æœ€åæ˜¯å¦å­˜åœ¨è¾“å…¥çš„å­—ç¬¦ä¸²
         System.out.println(result4);
-        System.out.println("aBC".equalsIgnoreCase("aBc"));//equalsIgnoreCase ²»Çø·Ö´óĞ¡Ğ´µÄÅĞ¶ÏÊÇ·ñÏàµÈ
+        System.out.println("aBC".equalsIgnoreCase("aBc"));//equalsIgnoreCase ä¸åŒºåˆ†å¤§å°å†™çš„åˆ¤æ–­æ˜¯å¦ç›¸ç­‰
         byte[] bytes = "abcde".getBytes();
         for (int i = 0; i < bytes.length;i++){ System.out.println(bytes[i]); }
-        System.out.println("abcjavaC++pythonjavacC#".indexOf("++"));//indexOf ÕÒµ½ÊäÈë×Ö·û´®ÔÚÔ­×Ö·û´®ÖĞµÚÒ»´Î³öÏÖµÄË÷ÒıÎ»ÖÃ
+        System.out.println("abcjavaC++pythonjavacC#".indexOf("++"));//indexOf æ‰¾åˆ°è¾“å…¥å­—ç¬¦ä¸²åœ¨åŸå­—ç¬¦ä¸²ä¸­ç¬¬ä¸€æ¬¡å‡ºç°çš„ç´¢å¼•ä½ç½®
         String s1 ="a";
-        System.out.println(s1.isEmpty());//isEmpty ÅĞ¶ÏÔ­×Ö·û´®ÊÇ·ñÊÇ¿Õ×Ö·û´®
-        System.out.println("abc".length());//length();ÅĞ¶ÏÔ­×Ö·û´®ÖĞµÄ×Ö·û´®³¤¶È
-        // lengthÊÇÊôĞÔ length()ÊÇ·½·¨
+        System.out.println(s1.isEmpty());//isEmpty åˆ¤æ–­åŸå­—ç¬¦ä¸²æ˜¯å¦æ˜¯ç©ºå­—ç¬¦ä¸²
+        System.out.println("abc".length());//length();åˆ¤æ–­åŸå­—ç¬¦ä¸²ä¸­çš„å­—ç¬¦ä¸²é•¿åº¦
+        // lengthæ˜¯å±æ€§ length()æ˜¯æ–¹æ³•
         System.out.println("".length());
         System.out.println("abcacbacbacbacbacbacabcabacbacabacbacbacbacbacb".lastIndexOf("cb"));
-        //lastIndexOf Ö¸µÄÊÇÊäÈë×Ö·û´®×îºóÒ»´Î³öÏÖµÄË÷Òı
+        //lastIndexOf æŒ‡çš„æ˜¯è¾“å…¥å­—ç¬¦ä¸²æœ€åä¸€æ¬¡å‡ºç°çš„ç´¢å¼•
         System.out.println("abcdefabcdefabcdefabcde".replace("def", "abc"));
-        //replace Í¨¹ınewcharµÄ·½Ê½ ĞŞ¸ÄÔ­×Ö·û´®ÖĞËùÓĞµÄÖ¸¶¨oldchar×Ö·û
+        //replace é€šè¿‡newcharçš„æ–¹å¼ ä¿®æ”¹åŸå­—ç¬¦ä¸²ä¸­æ‰€æœ‰çš„æŒ‡å®šoldcharå­—ç¬¦
        String []a= "abcdefabcdefabcdefabcde".split("d");
-        for (String element: a) { System.out.print(element+" "); }//split ´ú±í Ê¹ÓÃ¸ø¶¨µÄ×Ö·ûµ±×÷·Ö¸î·û£¬·Ö¸îÔ´×Ö·û´®
+        for (String element: a) { System.out.print(element+" "); }//split ä»£è¡¨ ä½¿ç”¨ç»™å®šçš„å­—ç¬¦å½“ä½œåˆ†å‰²ç¬¦ï¼Œåˆ†å‰²æºå­—ç¬¦ä¸²
         System.out.println();
-        boolean b = "avbasfzxcerq".startsWith("a");//startsWish ÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÔ¸Ã×Ó×Ö·û´®½áÎ²
+        boolean b = "avbasfzxcerq".startsWith("a");//startsWish åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä»¥è¯¥å­å­—ç¬¦ä¸²ç»“å°¾
         System.out.println(b);
         System.out.println("http://www.baidu.com".substring(7,10));
-        char[] chas = "ÄãÊÇ´óÉµ±Æ".toCharArray();  //toCharArray °Ñ×Ö·û´®·ÖÎªÒ»¸ö¸öµÄ×Ö·û
+        char[] chas = "ä½ æ˜¯å¤§å‚»é€¼".toCharArray();  //toCharArray æŠŠå­—ç¬¦ä¸²åˆ†ä¸ºä¸€ä¸ªä¸ªçš„å­—ç¬¦
         for (char element : chas) {System.out.print(element); }
-        System.out.println("        helloWorld      ".trim());//trim È¥³ıÁ½±ßµÄ¿Õ¸ñ
-        String s2= String.valueOf(true);  //valueOf  °ÑÊäÈëµÄÈÎºÎÀàĞÍµÄ×ª»»³ÉÇ°Ãæ¶ÔÏóµÄÀàĞÍ£¬È»ºóÊä³ö
+        System.out.println("        helloWorld      ".trim());//trim å»é™¤ä¸¤è¾¹çš„ç©ºæ ¼
+        String s2= String.valueOf(true);  //valueOf  æŠŠè¾“å…¥çš„ä»»ä½•ç±»å‹çš„è½¬æ¢æˆå‰é¢å¯¹è±¡çš„ç±»å‹ï¼Œç„¶åè¾“å‡º
         System.out.println(s2);
-        StringBuilder s3= new StringBuilder(); //ÓÃStringBuilder new³öÒ»¸ö¶ÔÏó£¬È»ºó¿ÉÒÔÓÃÕâ¸ö¶ÔÏóÀ´±£´æĞèÒªÁ¬½ÓµÄÊı¾İ£¨¿ÉÒÔÊÇÈÎºÎÊı¾İ£©£¬×îºó¶¼»áÊÇ×Ö·û´®
+        StringBuilder s3= new StringBuilder(); //ç”¨StringBuilder newå‡ºä¸€ä¸ªå¯¹è±¡ï¼Œç„¶åå¯ä»¥ç”¨è¿™ä¸ªå¯¹è±¡æ¥ä¿å­˜éœ€è¦è¿æ¥çš„æ•°æ®ï¼ˆå¯ä»¥æ˜¯ä»»ä½•æ•°æ®ï¼‰ï¼Œæœ€åéƒ½ä¼šæ˜¯å­—ç¬¦ä¸²
         s3.append("wocao"+"wodiu");
         System.out.println(s3);
         new Calendar
     }
 }
-
